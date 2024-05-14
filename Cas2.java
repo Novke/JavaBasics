@@ -154,6 +154,7 @@ public class Cas2 {
     
     static void brojacReci(){
         int i = 0;
+        //beskonacna petlja
         while (true){
             System.out.println(i++);
         }
