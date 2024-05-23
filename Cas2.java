@@ -159,4 +159,5 @@ public class Cas2 {
             System.out.println(i++);
         }
     }
+   
 }
