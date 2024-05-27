@@ -272,8 +272,13 @@ public class Cas4 {
          return akumulator;
      }
      
+     //primer rekurzije
      static int faktorijalRekurzija(int n){
+         //JAKO BITNA STVAR:
+         //postoji prekidac rekurzije, da ne ode u beskonacnost
          if (n == 0) return 1;
+         
+         //dodaje novu funkciju na stack (tanjir)
          return n * (faktorijalRekurzija(n-1));
      }
       

@@ -18,5 +18,23 @@ Cas4.primerPackagePrvateMetoda();
 
         //vidi promenljiivu jer je public
 //      Cas4.prom4;
+
+        System.out.println("Rezultat je:" + rekurzija(5));
+
     }
+    
+    
+    static int rekurzija(int broj){
+        if (broj > 30){
+            System.out.println("HAHA");
+            return 10;
+        }
+        if (broj % 3 == 2){
+            System.out.println("WOW");
+            return 3+rekurzija(broj*2);
+        }
+        System.out.println("Denver");
+        return 2*(rekurzija(broj+4));
+    }
+    
 }

@@ -17,7 +17,7 @@ public class Cas2 {
         brojacReci();
     }
     
-    static void funkcija1(){
+     void funkcija1(){
         //mora import
         double x = sqrt(10);
         
