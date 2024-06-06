@@ -18,7 +18,11 @@ public class Osoba {
     //ISTO KAO DA SI NAPISEAO
     //public String prezime = null;
     public int godiste;
-    public static String vrsta;
+//    public static String vrsta;
+    
+    //ovome moze da se pristupi iz ove klase
+    //i iz svih klasa koje nasledjuju ovu klasu
+    protected String krvnaGrupa;
 
        
     //2. Konstruktori

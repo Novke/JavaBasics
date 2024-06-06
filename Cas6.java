@@ -86,6 +86,7 @@ public class Cas6 {
                                     //dok moze da Integer i Double
         };
         
+        
         System.out.println(nizOsoba[0].ime);
 //        System.out.println(nizOsoba[2].ime); baca gresku jer je osoba null
                 
