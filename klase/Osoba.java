@@ -4,6 +4,8 @@
  */
 package test.klase;
 
+import java.util.Objects;
+
 /**
  *
  * @author Novica
@@ -20,9 +22,52 @@ public class Osoba {
     public int godiste;
 //    public static String vrsta;
     
+    public String jmbg;
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 97 * hash + Objects.hashCode(this.jmbg);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Osoba other = (Osoba) obj;
+        return Objects.equals(this.jmbg, other.jmbg);
+    }
+    
+    
+
+    public String getJmbg() {
+        return jmbg;
+    }
+
+    public void setJmbg(String jmbg) {
+        this.jmbg = jmbg;
+    }
+    
     //ovome moze da se pristupi iz ove klase
     //i iz svih klasa koje nasledjuju ovu klasu
     protected String krvnaGrupa;
+    
+    public void kaziCao(){
+        System.out.println("pozvana je kazi cao iz klase osoba");
+        System.out.println("Cao, ja sam " + ime + " " + prezime);
+    }
+    
+    public String vratiImePrezime(){
+        return ime + " " + prezime;
+    }
 
        
     //2. Konstruktori
@@ -30,6 +75,7 @@ public class Osoba {
     //ako ga ne definisemo sami, automatski se generise prazan kostruktor
     //tj ovo:
     public Osoba() {
+        System.out.println("Konstruisana je nova osoba");
     }
     
     //BITNO:
@@ -51,6 +97,8 @@ public class Osoba {
         //ime je ulazni parametar
         this.ime = ime;
         this.prezime = prezime;
+        
+        System.out.println("Pozvan je konstruktor parametrizovani");
     }
     
     //3.
@@ -73,6 +121,38 @@ public class Osoba {
     @Override
     public String toString() {
         return "Osoba{" + "ime=" + ime + ", prezime=" + prezime + ", godiste=" + godiste + '}';
+    }
+
+    public String getIme() {
+        return ime;
+    }
+
+    public void setIme(String ime) {
+        this.ime = ime;
+    }
+
+    public String getPrezime() {
+        return prezime;
+    }
+
+    public void setPrezime(String prezime) {
+        this.prezime = prezime;
+    }
+
+    public int getGodiste() {
+        return godiste;
+    }
+
+    public void setGodiste(int godiste) {
+        this.godiste = godiste;
+    }
+
+    public String getKrvnaGrupa() {
+        return krvnaGrupa;
+    }
+
+    public void setKrvnaGrupa(String krvnaGrupa) {
+        this.krvnaGrupa = krvnaGrupa;
     }
  
     

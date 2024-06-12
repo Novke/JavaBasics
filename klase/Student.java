@@ -4,6 +4,9 @@
  */
 package test.klase;
 
+import test.klase.enumeracije.Mesec;
+import test.klase.enumeracije.Semestar;
+
 /**
  *
  * @author Novica
@@ -16,8 +19,16 @@ public class Student extends Osoba {
 //    int godiste;
     public String brojIndeksa;
     
+//    public int semestar;
+    public Semestar trenutniSemestar;
+    
+    
+    public Mesec mesecUpisa;
+    
     public Student(){
         krvnaGrupa = "asdf"; //moze da mu pristupi jer je protected
     }
+    
+    
    
 }
